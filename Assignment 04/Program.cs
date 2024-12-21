@@ -1,4 +1,10 @@
-﻿namespace Assignment_04
+﻿using System.Collections.Specialized;
+using System.ComponentModel;
+using System.Globalization;
+using System.Runtime.Serialization.Formatters;
+using System.Text;
+
+namespace Assignment_04
 {
     internal class Program
     {
@@ -46,26 +52,46 @@
             #endregion
 
             #region Question 21 Write a program in C# Sharp to merge two arrays of the same size sorted in ascending order.
-
-
+            /*Console.Write("Enter the size of the two arrays: ");
+            int.TryParse(Console.ReadLine(), out int size);
+            int[] arr1 = new int[size];
+            int[] arr2 = new int[size];
+            int[] arr3 = new int[size * 2];
+            Console.WriteLine("Enter array 1 in ascending order: ");
+            for (int i = 0; i < size; i++)
+            {
+                arr1[i] = int.Parse(Console.ReadLine());
+            }
+            Console.WriteLine("Enter array 2 in ascending order: ");
+            for (int i = 0; i < size; i++)
+            {
+                arr2[i] = int.Parse(Console.ReadLine());
+            }
+            Array.Copy(arr1, arr3, size);
+            Array.ConstrainedCopy(arr2,0,arr3,size,size);
+            Array.Sort(arr3);
+            foreach(int i in arr3)
+            {
+                Console.WriteLine(i);
+            }*/
 
             #endregion
 
             #region Question 22 Write a program in C# Sharp to count the frequency of each element of an array.
-            /*int[] arr = new int[] { 1, 4, 3, 2, 2, 5, 1, 6, 7, 8, 1, 6 };
-            Array.Sort(arr);
-            for (int i = 0; i < arr.Length; i++)
-            {
-                int count = 0;
-                for (int j = 0; j < arr.Length; j++)
-                {
-                    if (arr[i] == arr[j])
-                    {
-                        count++;
-                    }
-                }
-                Console.WriteLine($"The number: {arr[i]} its Frequency: {count}");
-            }*/
+            //int[] arr = new int[] { 1, 4, 3, 2, 2, 5, 1, 6, 7, 8, 1, 6 };
+            //Array.Sort(arr);
+            //for (int i = 0; i < arr.Length; i++)
+            //{
+            //    int count = 0;
+            //    for (int j = 0; j < arr.Length; j++)
+            //    {
+            //        if (arr[i] == arr[j])
+            //        {
+            //            count++;
+            //        }
+            //    }
+            //    Console.WriteLine($"The number: {arr[i]} its Frequency: {count}");
+            //}
 
 
             #endregion
@@ -112,12 +138,96 @@
 
             #endregion
 
+            #region Question 25 write a program find the longest distance between Two equal cells.
+            //Console.WriteLine("Enter the array size: ");
+            //int.TryParse(Console.ReadLine(), out int size);
+            //int[] arr= new int[size];
+            //for(int i = 0; i < size; i++)
+            //{
+            //    arr[i]=int.Parse(Console.ReadLine());
+            //}
+            //int maxdis= 0;
+            //for (int i = 0; i < arr.Length; i++)
+            //{
+
+            //    for (int j = 0; j < size; j++) {
+            //        if (arr[i] == arr[j])
+            //        {
+            //            if(maxdis<(j-i))
+            //            maxdis = (j - i)-1;
+            //        }
+            //            }
+
+            //}
+            //Console.WriteLine(maxdis);
+            #endregion
+
+            #region Question 26 Given a list of space separated words, reverse the order of the words.
+            //string phrase=Console.ReadLine();
+            //string[] sub = phrase.Split(" ");
+            //string [] reverse=new string[sub.Length];
+            //for (int i =0; i <sub.Length; i++)
+            //{
+            //    reverse[i]=(sub[sub.Length-1-i]);
+            //}
+            //string result=string.Join(" ",reverse);     
+            //Console.Write(result);
+            #endregion
+
+            #region Question 27 Write a program to create two multidimensional arrays of same size. Accept value from user and store them in first array. Now copy all the elements of first array on second array and print second array.
+            //int size=int.Parse(Console.ReadLine());
+            //string[,] words = new string[size, size];
+            //string[,] names = new string[size, size];
+            //for (int i = 0; i < size; i++)
+            //{
+            //    for (int j = 0; j < size; j++)
+            //    {
+            //        words[i, j] = Console.ReadLine();
+            //    }
+            //}
+            //Array.Copy(words,names,words.Length);
+            //foreach (String s in names)
+            //{
+            //    Console.WriteLine(s);
+            //}
+            #endregion
+
             #region Question 28 Write a Program to Print One Dimensional Array in Reverse Order
             /*int[] arr = new int[] { 1, -4, 3, -2, 2, -56, 1, 6, 7, 8, 1, 6, 22, 9, 540, 590 };
             for (int i = arr.Length - 1; i >= 0; i--)
             {
                 Console.Write($"{arr[i]} ");
             }*/
+            #endregion
+
+            #region Question 1 explain the difference between passing (Value type parameters) by value and by reference then write a suitable c# example.
+            //the diffrence between the passing by value and passing by refernces that 
+            //in passing by references the varible it self is sent to the function 
+            //where the result of the function change the value of the variables in the main 
+            //and when passing by value it can be considered that a copy of the variables sent to the 
+            //function and the result of the function doesnt change the value of the variables in the main
+            //Ex
+            //static void byvalue (int x, int y)
+            //{
+            //    int temp = x; 
+            //    x=y; 
+            //    y=temp;
+            //}
+
+            //static void byreferences(ref int x,ref int y)
+            //{
+            //    int temp = x;
+            //    x = y;
+            //    y = temp;
+            //}
+
+            //int a = 10,b=20;
+            //byvalue(a,b);
+            //Console.WriteLine("by value");
+            //Console.WriteLine($"a value: {a} b value: {b}");
+            //Console.WriteLine("by references");
+            //byreferences(ref a,ref b);
+            //Console.WriteLine($"a value: {a} b value: {b}");
             #endregion
 
             #region Question 2 Write a program in C# Sharp to create a function to calculate the sum of the individual digits of a given number.
@@ -162,7 +272,7 @@
             #endregion
 
 
-            #region Question 4
+            #region Question 4 Create an iterative (non-recursive) function to calculate the factorial of the number specified as parameter .
             /*static int Factorial(int num)
             {
 
@@ -178,17 +288,22 @@
             Console.WriteLine(Factorial(num));*/
             #endregion
 
-            #region Question 5
-            static void ChangeChar(ref String name, int index, Char x)
-            {
-                name
-    
-
-        }
-
-
-
+            #region Question 5 Create a function named "ChangeChar" to modify a letter in a certain position (0 based) of a string, replacing it with a different letter .
+            //static string ChangeChar(ref string name, int index, Char x)
+            //{
+            //    StringBuilder sb = new StringBuilder(name);
+            //    sb[index-1] = x;
+            //    return sb.ToString();
+            //}
+            //string name ="My name is youssef";
+            //name=ChangeChar(ref name,2,'x');
+            //Console.WriteLine(name);
             #endregion
+
+
+
+
         }
     }
+            
 }
